@@ -19,6 +19,26 @@
       </div>
       <p class="mt-2 text-center text-md">スマホ販売サイト</p>
     </div>
+    <div class="p-4">
+      <div style="height: calc(100% - 32px)">
+        <NuxtLink
+          to="/sightseeing/sightseeing"
+          @mouseenter="playVideo2"
+          @mouseleave="pauseVideo2"
+        >
+          <video
+            ref="videoSightseeingRef"
+            src="/videos/thumbnail/sightseeing.mp4"
+            class="w-full rounded-lg cursor-pointer object-fill h-full"
+            muted
+            loop
+            preload="metadata"
+          ></video>
+        </NuxtLink>
+      </div>
+      <p class="mt-2 text-center text-md">観光地HP</p>
+    </div>
+    <!-- <NuxtLink to="/test/test"> test </NuxtLink> -->
     <div v-for="(item, i) in thumbnail" class="p-4 group">
       <div class="relative bg-gray-100" style="height: calc(100% - 32px)">
         <img :src="item.src" alt="背景画像" class="rounded-lg h-full" />
@@ -56,14 +76,22 @@ useHead({
   ],
 });
 const videoRef = ref(null);
+const videoSightseeingRef = ref(null);
 
 const playVideo = () => {
   videoRef.value?.play();
+};
+const playVideo2 = () => {
+  videoSightseeingRef.value?.play();
 };
 
 const pauseVideo = () => {
   videoRef.value?.pause();
   videoRef.value.currentTime = 0; // 元に戻すなら
+};
+const pauseVideo2 = () => {
+  videoSightseeingRef.value?.pause();
+  videoSightseeingRef.value.currentTime = 0; // 元に戻すなら
 };
 
 const setCharRef = (i, j, el) => {
@@ -74,7 +102,6 @@ const setCharRef = (i, j, el) => {
 };
 import gsap from "gsap";
 const thumbnail = [
-  { src: "/images/thumbnail/momizi.webp", text: "観光案内HP" },
   { src: "/images/thumbnail/dance.webp", text: "クリエイター向けHP" },
 ];
 const charRefsList = ref([]); // それぞれの文字列の配列（2次元配列）
