@@ -57,10 +57,11 @@ onMounted(() => {
 section {
   display: flex;
   align-items: center;
-  margin-top: 160px;
+  // margin-top: 160px;
   padding-bottom: 40px;
-  max-width: 1400px;
+  max-width: 1900px;
   position: relative;
+  margin: 160px auto 0;
   .cloud {
     position: absolute;
     opacity: 0.6;

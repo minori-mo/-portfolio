@@ -164,7 +164,7 @@ const closeModal = () => {
   isOpen.value = false;
   scrollRight();
 };
-import gsap from "gsap";
+import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 onMounted(() => {
   updateScrollAmount();

@@ -42,7 +42,7 @@
 
 <script setup>
 import { ref } from "vue";
-import gsap from "gsap"; // GSAPをインポート
+import { gsap } from "gsap"; // GSAPをインポート
 
 const items = [
   {

@@ -110,7 +110,7 @@ const scrollLeft = () => {
 const scrollRight = () => {
   scrollContainer.value?.scrollBy({ left: 286, behavior: "smooth" });
 };
-import gsap from "gsap";
+import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 onMounted(() => {
   const items = gsap.utils.toArray(".fade-group-goods");

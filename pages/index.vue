@@ -100,7 +100,7 @@ const setCharRef = (i, j, el) => {
   }
   charRefsList.value[i][j] = el;
 };
-import gsap from "gsap";
+import { gsap } from "gsap";
 const thumbnail = [
   { src: "/images/thumbnail/dance.webp", text: "クリエイター向けHP" },
 ];

@@ -74,7 +74,7 @@
 
 <script setup>
 import { onMounted } from "vue";
-import gsap from "gsap";
+import { gsap } from "gsap";
 const boxes = ["A", "B", "C"]; // ダミーのデータ
 const tl = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true });
 
