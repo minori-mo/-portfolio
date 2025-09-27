@@ -2,7 +2,8 @@
   <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
     <div class="p-4">
       <div style="height: calc(100% - 32px)">
-        <NuxtLink
+        <NuxtLink to="/iphone/iphone"> test </NuxtLink>
+        <!-- <NuxtLink
           to="/iphone/iphone"
           @mouseenter="playVideo"
           @mouseleave="pauseVideo"
@@ -15,13 +16,14 @@
             loop
             preload="metadata"
           ></video>
-        </NuxtLink>
+        </NuxtLink> -->
       </div>
       <p class="mt-2 text-center text-md">スマホ販売サイト</p>
     </div>
     <div class="p-4">
       <div style="height: calc(100% - 32px)">
-        <NuxtLink
+        <NuxtLink to="/sightseeing/sightseeing"> test </NuxtLink>
+        <!-- <NuxtLink
           to="/sightseeing/sightseeing"
           @mouseenter="playVideo2"
           @mouseleave="pauseVideo2"
@@ -34,7 +36,7 @@
             loop
             preload="metadata"
           ></video>
-        </NuxtLink>
+        </NuxtLink> -->
       </div>
       <p class="mt-2 text-center text-md">観光地HP</p>
     </div>
@@ -78,21 +80,21 @@ useHead({
 const videoRef = ref(null);
 const videoSightseeingRef = ref(null);
 
-const playVideo = () => {
-  videoRef.value?.play();
-};
-const playVideo2 = () => {
-  videoSightseeingRef.value?.play();
-};
+// const playVideo = () => {
+//   videoRef.value?.play();
+// };
+// const playVideo2 = () => {
+//   videoSightseeingRef.value?.play();
+// };
 
-const pauseVideo = () => {
-  videoRef.value?.pause();
-  videoRef.value.currentTime = 0; // 元に戻すなら
-};
-const pauseVideo2 = () => {
-  videoSightseeingRef.value?.pause();
-  videoSightseeingRef.value.currentTime = 0; // 元に戻すなら
-};
+// const pauseVideo = () => {
+//   videoRef.value?.pause();
+//   videoRef.value.currentTime = 0; // 元に戻すなら
+// };
+// const pauseVideo2 = () => {
+//   videoSightseeingRef.value?.pause();
+//   videoSightseeingRef.value.currentTime = 0; // 元に戻すなら
+// };
 
 const setCharRef = (i, j, el) => {
   if (!charRefsList.value[i]) {
