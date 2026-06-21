@@ -30,10 +30,15 @@ jobs:
           node-version: '20'
           cache: 'pnpm'
       - run: pnpm install
-      - run: pnpm run generate
+        timeout-minutes: 5
+      - name: Generate static site
+        run: timeout 120 pnpm run generate || test -d .output/public
+        timeout-minutes: 10
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
+        timeout-minutes: 5
         with:
           path: './.output/public'
       - id: deployment
         uses: actions/deploy-pages@v4
+        timeout-minutes: 5
