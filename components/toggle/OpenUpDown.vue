@@ -44,24 +44,25 @@
 import { ref } from "vue";
 import { gsap } from "gsap"; // GSAPをインポート
 
+const p = usePublicPath();
 const items = [
   {
     title: "PhoneとPC",
     content:
       "Phoneミラーリングを使うと、MacでPhoneの画面を見たり操作することができます。Phoneを取り出す必要はありません。連係機能により、Macから電話に出るのもメッセージに返信するのも自由自在。iPhone上でコピーした画像、ビデオ、テキストを、Mac上の別のアプリにペーストするのも簡単です。iCloudに保存したファイルには、どちらのデバイスからでもアクセスできます。",
-    src: "/images/toggle/pc.webp",
+    src: p("/images/toggle/pc.webp"),
   },
   {
     title: "PhoneとWatch",
     content:
       "Phoneでグループ写真を撮る時は、Watchをファインダーにして撮影すれば、あなたもみんなと一緒に写れます。Watchで電話に出たあと、iPhoneをタップしてiPhoneで会話を続けることもできます。",
-    src: "/images/toggle/watch.webp",
+    src: p("/images/toggle/watch.webp"),
   },
   {
     title: "Phoneとイヤホン",
     content:
       "Earphoneの設定はPhone上でタップするだけ。適応型オーディオは、一日を通じて変化する環境や周りの人とのやり取りに合わせて、あなたの代わりにノイズコントロールを自動的に調整。最高のリスニング体験をお届けします。",
-    src: "/images/toggle/earphone.webp",
+    src: p("/images/toggle/earphone.webp"),
   },
 ];
 

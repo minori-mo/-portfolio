@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const p = usePublicPath();
 const scrollTop = () => {
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 };
@@ -7,13 +8,13 @@ const scrollTop = () => {
   <ul class="sns">
     <li>
       <a href="" title="X" rel="noopener" target="_blank">
-        <img src="/images/slideShow/logoX.png" alt="X" class="w-8 h-8" />
+        <img :src="p('/images/slideShow/logoX.png')" alt="X" class="w-8 h-8" />
       </a>
     </li>
     <li>
       <a href="" title="Instagram" rel="noopener" target="_blank">
         <img
-          src="/images/slideShow/logoInstagram.svg"
+          :src="p('/images/slideShow/logoInstagram.svg')"
           alt="Instagram"
           class="w-8 h-8"
         />
@@ -22,7 +23,7 @@ const scrollTop = () => {
     <li>
       <a href="" title="Facebook" rel="noopener" target="_blank">
         <img
-          src="/images/slideShow/logoFacebook.svg"
+          :src="p('/images/slideShow/logoFacebook.svg')"
           alt="Facebook"
           class="w-8 h-8"
         />
@@ -31,7 +32,7 @@ const scrollTop = () => {
     <li>
       <a href="" title="Youtube" rel="noopener" target="_blank">
         <img
-          src="/images/slideShow/logoYoutube.svg"
+          :src="p('/images/slideShow/logoYoutube.svg')"
           alt="Youtube"
           class="w-10 h-9"
         />
@@ -40,7 +41,7 @@ const scrollTop = () => {
   </ul>
   <footer>
     <ul class="w-full">
-      <button @click="scrollTop" class="page-top"></button>
+      <button @click="scrollTop" class="page-top" :style="{ background: `url(${p('/images/slideShow/upArrow.svg')}) center / contain no-repeat` }"></button>
       <li><a href="#top">TOP</a></li>
       <li><a href="">葛葉稲荷神社神社を知る</a></li>
       <li><a href="">葛葉稲荷神社の歴史</a></li>
@@ -87,7 +88,7 @@ footer {
     right: 0;
     width: 42px;
     height: 42px;
-    background: url(/images/slideShow/upArrow.svg) center / contain no-repeat;
+    /* background はインラインスタイルで設定 */
   }
 }
 </style>

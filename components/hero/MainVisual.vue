@@ -11,14 +11,16 @@
         autoplay
         muted
         loop
-        poster="/images/image1.webp"
+        :poster="p('/images/image1.webp')"
         class="rounded-2xl w-full h-full object-cover"
       >
-        <source src="/videos/video.mp4" type="video/mp4" />
+        <source :src="p('/videos/video.mp4')" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+const p = usePublicPath();
+</script>

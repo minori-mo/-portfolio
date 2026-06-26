@@ -1,4 +1,5 @@
 <script setup>
+const p = usePublicPath();
 const slideIn = ref([]);
 const hoverAnimation = ref([]);
 onMounted(() => {
@@ -10,7 +11,7 @@ onMounted(() => {
   <div>
     <section :ref="(el) => slideIn.push(el)">
       <div :ref="(el) => hoverAnimation.push(el)" class="cloud">
-        <img src="/images/slideShow/cloud.png" />
+        <img :src="p('/images/slideShow/cloud.png')" />
       </div>
       <div class="text">
         <h2 class="title">葛葉稲荷神社を知る</h2>
@@ -21,11 +22,11 @@ onMounted(() => {
           信仰と文化を紐解きます。
         </p>
       </div>
-      <figure class="order"><img src="/images/slideShow/0.webp" /></figure>
+      <figure class="order"><img :src="p('/images/slideShow/0.webp')" /></figure>
     </section>
     <section :ref="(el) => slideIn.push(el)">
       <div :ref="(el) => hoverAnimation.push(el)" class="cloud right">
-        <img src="/images/slideShow/cloud.png" />
+        <img :src="p('/images/slideShow/cloud.png')" />
       </div>
       <div class="text">
         <h2 class="title">葛葉稲荷神社に残る</h2>
@@ -35,11 +36,11 @@ onMounted(() => {
           あらゆる人々の願いに<br />寄り添い続けてきた悠久の歴史があります。<br />その「願いの歴史」を、紐解いていきます。<br />
         </p>
       </div>
-      <figure><img src="/images/slideShow/1.webp" /></figure>
+      <figure><img :src="p('/images/slideShow/1.webp')" /></figure>
     </section>
     <section :ref="(el) => slideIn.push(el)">
       <div :ref="(el) => hoverAnimation.push(el)" class="cloud">
-        <img src="/images/slideShow/cloud.png" />
+        <img :src="p('/images/slideShow/cloud.png')" />
       </div>
       <div class="text">
         <h2 class="title">境内のご案内</h2>
@@ -48,7 +49,7 @@ onMounted(() => {
           境内各所と共にご案内します。
         </p>
       </div>
-      <figure class="order"><img src="/images/slideShow/2.webp" /></figure>
+      <figure class="order"><img :src="p('/images/slideShow/2.webp')" /></figure>
     </section>
   </div>
 </template>

@@ -71,58 +71,59 @@
 </template>
 
 <script setup>
+const p = usePublicPath();
 const sliderItems = [
   {
-    src: "/images/slider/hanabi.webp",
+    src: p("/images/slider/hanabi.webp"),
     text1: "すみずみまで、",
     text2: "あなたらしく。",
     subText: "カスタマイズ",
     color: "white",
   },
   {
-    src: "/images/slider/battery.webp",
+    src: p("/images/slider/battery.webp"),
     text1: "スピードのスタミナも。",
     text2: "",
     subText: "チップとバッテリー",
     color: "white",
   },
   {
-    src: "/images/slider/dog.webp",
+    src: p("/images/slider/dog.webp"),
     text1: "あなたのデータは、",
     text2: "あなたの場所に。",
     subText: "プライバシー",
     color: "black",
   },
   {
-    src: "/images/slider/dog2.webp",
+    src: p("/images/slider/dog2.webp"),
     text1: "想像以上の写真と",
     text2: "ビデオを撮ろう。",
     subText: "先進的なカメラ",
     color: "white",
   },
   {
-    src: "/images/slider/mori.webp",
+    src: p("/images/slider/mori.webp"),
     text1: "もしもの圏外にも、",
     text2: "備えています。",
     subText: "安全機能",
     color: "white",
   },
   {
-    src: "/images/slider/hanabi.webp",
+    src: p("/images/slider/hanabi.webp"),
     text1: "すみずみまで、",
     text2: "あなたらしく。",
     subText: "カスタマイズ",
     color: "white",
   },
   {
-    src: "/images/slider/battery.webp",
+    src: p("/images/slider/battery.webp"),
     text1: "スピードのスタミナも。",
     text2: "",
     subText: "チップとバッテリー",
     color: "white",
   },
   {
-    src: "/images/slider/dog.webp",
+    src: p("/images/slider/dog.webp"),
     text1: "あなたのデータは、",
     text2: "あなたの場所に。",
     subText: "プライバシー",

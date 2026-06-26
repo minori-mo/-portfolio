@@ -5,7 +5,7 @@
         <div class="flex items-center space-x-8">
           <!-- Logo -->
           <div class="text-xl font-semibold">
-            <img src="/images/logo.webp" alt="logo" width="20px" />
+            <img :src="p('/images/logo.webp')" alt="logo" width="20px" />
           </div>
           <!-- Navigation Menu -->
           <div class="hidden md:flex space-x-6 text-sm text-white">
@@ -20,14 +20,14 @@
         </div>
         <div class="flex items-center space-x-4">
           <a href="#">
-            <img src="/images/question.webp" alt="logo" width="20px" />
+            <img :src="p('/images/question.webp')" alt="logo" width="20px" />
           </a>
           <a href="#">
-            <img src="/images/bag.webp" alt="logo" width="20px" />
+            <img :src="p('/images/bag.webp')" alt="logo" width="20px" />
           </a>
           <img
             @click="isOpen = !isOpen"
-            src="/images/icon/hamburger.svg"
+            :src="p('/images/icon/hamburger.svg')"
             alt="ハンバーガーメニュー"
             class="w-6 h-6 text-blue-400 md:hidden text-white cursor-pointer items-center"
           />
@@ -59,6 +59,7 @@
 </template>
 
 <script setup>
+const p = usePublicPath();
 const isOpen = ref(false);
 
 const closeMenu = () => {

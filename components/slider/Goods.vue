@@ -52,51 +52,52 @@
 </template>
 
 <script setup>
+const p = usePublicPath();
 const sliderItems = [
   {
-    src: "/images/slider/goods.webp",
+    src: p("/images/slider/goods.webp"),
     text1: "Phone100",
     subText: "究極のPhone",
     price: 160000,
   },
   {
-    src: "/images/slider/goods.webp",
+    src: p("/images/slider/goods.webp"),
     text1: "Phone99",
     subText: "チップとバッテリー",
     price: 160000,
   },
   {
-    src: "/images/slider/goods.webp",
+    src: p("/images/slider/goods.webp"),
     text1: "Phone98",
     subText: "プライバシー",
     price: 160000,
   },
   {
-    src: "/images/slider/goods.webp",
+    src: p("/images/slider/goods.webp"),
     text1: "Phone97",
     subText: "先進的なカメラ",
     price: 160000,
   },
   {
-    src: "/images/slider/goods.webp",
+    src: p("/images/slider/goods.webp"),
     text1: "Phone96",
     subText: "安全機能",
     price: 160000,
   },
   {
-    src: "/images/slider/goods.webp",
+    src: p("/images/slider/goods.webp"),
     text1: "Phone95",
     subText: "カスタマイズ",
     price: 160000,
   },
   {
-    src: "/images/slider/goods.webp",
+    src: p("/images/slider/goods.webp"),
     text1: "Phone94",
     subText: "チップとバッテリー",
     price: 160000,
   },
   {
-    src: "/images/slider/goods.webp",
+    src: p("/images/slider/goods.webp"),
     text1: "Phone93",
     subText: "プライバシー",
     price: 160000,

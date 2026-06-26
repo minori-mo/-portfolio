@@ -35,7 +35,7 @@
           </div>
           <div class="flex-1">
             <img
-              src="/images/modal/zou.webp"
+              :src="p('/images/modal/zou.webp')"
               alt="背景画像"
               class="rounded-lg rounded-t-none w-full"
             />
@@ -53,7 +53,7 @@
           </div>
           <div class="flex-1">
             <img
-              src="/images/modal/sika.webp"
+              :src="p('/images/modal/sika.webp')"
               alt="背景画像"
               class="rounded-lg rounded-t-none w-full"
             />
@@ -69,4 +69,5 @@ defineProps({
   isOpen: true,
 });
 const emit = defineEmits(["close"]);
+const p = usePublicPath();
 </script>

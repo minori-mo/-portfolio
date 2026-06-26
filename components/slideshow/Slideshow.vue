@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { gsap } from "gsap";
 
+const p = usePublicPath();
 const images = [
-  "/images/slideShow/0.webp",
-  "/images/slideShow/1.webp",
-  "/images/slideShow/2.webp",
-  "/images/slideShow/3.webp",
+  p("/images/slideShow/0.webp"),
+  p("/images/slideShow/1.webp"),
+  p("/images/slideShow/2.webp"),
+  p("/images/slideShow/3.webp"),
 ];
 
 const slides = ref([]);

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const p = usePublicPath();
 const slideIn = ref([]);
 const parallax = ref();
 onMounted(() => {
@@ -12,7 +13,7 @@ onMounted(() => {
     <div class="w-full h-full overflow-hidden relative">
       <img
         ref="parallax"
-        src="/images/slideShow/scroll.jpg"
+        :src="p('/images/slideShow/scroll.jpg')"
         class="absolute top-0 left-0 w-full parallax-img"
       />
     </div>

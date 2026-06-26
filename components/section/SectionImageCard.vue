@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const p = usePublicPath();
 const slideIn = ref([]);
 onMounted(() => {
   useSlideInAnimation(slideIn.value);
@@ -7,7 +8,7 @@ onMounted(() => {
 <template>
   <section class="flex">
     <div class="relative w-1/2 text" style="overflow: hidden">
-      <img class="w-full object-cover" src="/images/slideShow/yukata.webp" />
+      <img class="w-full object-cover" :src="p('/images/slideShow/yukata.webp')" />
       <div class="absolute inset-0 flex items-center justify-center">
         <h2 class="title">御参拝・御祈祷・授与品</h2>
       </div>
@@ -29,7 +30,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="relative w-1/2 text">
-      <img class="h-full object-cover" src="/images/slideShow/maturi.webp" />
+      <img class="h-full object-cover" :src="p('/images/slideShow/maturi.webp')" />
       <div class="absolute inset-0 flex items-center justify-center">
         <h2 class="title">行事</h2>
       </div>
