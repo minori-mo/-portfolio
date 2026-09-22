@@ -100,28 +100,26 @@
       </div>
       <p class="mt-2 text-center text-md">出席管理　KITERU</p>
     </div>
-
-    <!-- <div v-for="(item, i) in thumbnail" class="p-4 group">
-      <div class="relative bg-gray-100" style="height: calc(100% - 32px)">
-        <img :src="item.src" alt="背景画像" class="rounded-lg h-full" />
-        <div
-          class="absolute inset-0 bg-white/50 backdrop-blur-sm rounded-lg hidden group-hover:block"
-        ></div>
-        <div class="absolute inset-0 flex items-center justify-center">
-          <div class="text-2xl font-bold flex gap-1 hidden group-hover:block">
-            <span
-              v-for="(char, j) in ['準', '備', '中', '.', '.', '.']"
-              :key="j"
-              class="inline-block"
-              :ref="(el) => setCharRef(i, j, el)"
-            >
-              {{ char }}
-            </span>
-          </div>
-        </div>
+    <div class="p-4">
+      <div class="aspect-video">
+        <NuxtLink
+          to="https://apps.apple.com/jp/app/trainee-tracker/id6785165891"
+          class="block h-full"
+          @mouseenter="playVideo6"
+          @mouseleave="pauseVideo6"
+        >
+          <video
+            ref="videoTraineeTrackerRef"
+            :src="p('/videos/thumbnail/traineeTracker.mp4')"
+            class="w-full h-full rounded-lg cursor-pointer object-cover"
+            muted
+            loop
+            preload="metadata"
+          ></video>
+        </NuxtLink>
       </div>
-      <p class="mt-2 text-center text-md">{{ item.text }}</p>
-    </div> -->
+      <p class="mt-2 text-center text-md">Trainee Tracker</p>
+    </div>
   </div>
   <!-- <FormEmail /> -->
 </template>
@@ -142,6 +140,7 @@ const videoSightseeingRef = ref(null);
 const videoYomuRef = ref(null);
 const videoGameRef = ref(null);
 const videoKiteruRef = ref(null);
+const videoTraineeTrackerRef = ref(null);
 
 const playVideo = () => {
   videoRef.value?.play();
@@ -157,6 +156,9 @@ const playVideo4 = () => {
 };
 const playVideo5 = () => {
   videoKiteruRef.value?.play();
+};
+const playVideo6 = () => {
+  videoTraineeTrackerRef.value?.play();
 };
 
 const pauseVideo = () => {
@@ -178,6 +180,10 @@ const pauseVideo4 = () => {
 const pauseVideo5 = () => {
   videoKiteruRef.value?.pause();
   videoKiteruRef.value.currentTime = 0; // 元に戻すなら
+};
+const pauseVideo6 = () => {
+  videoTraineeTrackerRef.value?.pause();
+  videoTraineeTrackerRef.value.currentTime = 0; // 元に戻すなら
 };
 
 const setCharRef = (i, j, el) => {
